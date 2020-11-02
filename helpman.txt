@@ -1,0 +1,8 @@
+1. cd <directory> - change the current directory to <directory>.
+2. clr - clear the screen.
+3. dir <directory> - List the contents of directory <directory>.
+4. environ - list all the environment strings
+5. echo <comment> - display <comment> on the display followed by a new line.
+6. help - display the user manual
+7. pause - pause operation of the shell until any key is pressed
+8. quit - quit the shell
