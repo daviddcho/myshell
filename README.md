@@ -7,3 +7,10 @@ myshell supports built-in commands, external commands from /bin and special shel
 git clone https://github.com/daviddcho/myshell.git
 make && ./myshell
 ```
+## Examples
+```
+echo Hello, World!
+cat README.md >> hello.txt
+wc -w < hello.txt > output.txt
+./a.out & ls -l 
+ls -l | wc -c
