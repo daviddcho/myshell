@@ -4,7 +4,6 @@
 #include <vector>
 
 
-vector<char*> shellCommands;
 // parses the arguments from user input line
 void parseLine(string line) {
   // Converting user input into command char 
@@ -29,8 +28,6 @@ void parseLine(string line) {
 
   while (command_token != NULL) {
     if (isShellCommand(command_token)) {
-      // Add shell command to the shell group
-      addShellCommand(command_token, &shellCommands);
       // Add NULL to the current group (not shell group);
       parsedGroups.at(i)->push_back(NULL); 
 
@@ -87,6 +84,3 @@ bool isShellCommand(char* c) {
   return false;
 }
 
-void addShellCommand(char* c, vector<char*> *shellCommands) {
-  shellCommands->push_back(c);
-}
