@@ -2,7 +2,7 @@
 #include <filesystem> // current_path()
 #include <unistd.h> // getcwd
 #include <limits.h> // PATH_MAX
-#include <fstream> // for reading file
+#include <fstream> 
 using namespace std;
 
 
@@ -15,15 +15,14 @@ int main(int argc, char *argv[], char *envp[]) {
   if (argc > 1) {
     // Get the batch file
     string filename = argv[1]; 
-    ifstream file(filename); 
-
-    if (file.is_open()) {
-      while(getline(file, line)) {
+    ifstream batch(filename); 
+    if (batch.is_open()) {
+      while(getline(batch, line)) {
         // Parse the line
         parseLine(line);
       }
       // Close the file
-      file.close();
+      batch.close();
       exit(0);
     }
   // If there is no batch file
