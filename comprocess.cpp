@@ -64,16 +64,21 @@ void externalRedirection(vector<vector<char*> * > commandGroups) {
   if (commandGroups.size() > 3) {
     // Get output file from command group
     vector<char*> *output = commandGroups.at(4);
+
     if (strcmp(commandGroups.at(3)->at(0), ">") == 0) {
       // Create new stdout for the output file 
       newstdout = open(output->at(0), O_WRONLY | O_TRUNC | O_CREAT, S_IRWXU | S_IRWXG | S_IRWXO);
+
     } else if (strcmp(commandGroups.at(3)->at(0), ">>") == 0) {
       // Create new stdout for output file 
       // If file exists: append, if not: create file
       newstdout = open(output->at(0), O_WRONLY | O_APPEND | O_CREAT, S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP);
+
     } else {
       cout << "Error: external redirection only supports > and >>" << '\n';
+
     }
+
     // Create new stdin for input file 
     newstdin = open(input->at(0), O_RDONLY, S_IRUSR | S_IRGRP); 
 
