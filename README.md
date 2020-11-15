@@ -25,7 +25,7 @@ The fork() system call creates a child process (a copy of the parent parent proc
 
 ## Special Shell Commands
 ### I/O redirection (<, >, >>)
-Theses shell commands can redurect standard input and/or standard output to/from a file rather than to/from a keyboard or display.
+Theses shell commands can redirect standard input and/or standard output to/from a file rather than to/from a keyboard or display.
 ```
 myshell$ cmd arg1 < input.txt > output.txt
 ```
