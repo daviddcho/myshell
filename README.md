@@ -19,6 +19,25 @@ make && ./myshell
 - pause: Pauses the operation of the shell until any key is pressed.
 - quit: Quits the shell.
 
+## External Commands
+myshell executes external commands by using fork(), execvp(), and wait().
+The fork() system call creates a child process (a copy of the parent parent process). This child process runs the execvp() call that changes the current process into executing the external command. The parent process waits for the child process to complete executing its command using the wait() call.
+
+## Special Shell Commands
+### I/O redirection (<, >, >>)
+Theses shell commands can redurect standard input and/or standard output to/from a file rather than to/from a keyboard or display.
+```
+myshell$ cmd arg1 < input.txt > output.txt
+```
+### Pipes (|)
+```
+grep error comprocess.cpp | wc -w
+```
+
+### Background execution (&)
+```
+ping google.com &
+```
 
 ## Examples
 ```
@@ -27,3 +46,4 @@ cat README.md >> hello.txt
 wc -w < hello.txt > output.txt
 ./a.out & ls -l 
 ls -l | wc -c
+```
