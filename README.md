@@ -10,9 +10,9 @@ make && ./myshell
 ```
 
 ## Built-in commands 
-- cd <dir>: Changes the current directory to the home directory or <dir>.
+- cd \<dir\>: Changes the current directory to the home directory or \<dir\>.
 - clr: Clears the screen.
-- dir <dir>: Lists all contents of the current directory or <dir>.
+- dir \<dir\>: Lists all contents of the current directory or \<dir\>.
 - environ: Lists all environment variables.
 - echo <comment>: Prints <comment> to standard output followed by a new line.
 - help: Prints the user manual.
