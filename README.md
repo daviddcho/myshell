@@ -39,11 +39,4 @@ grep error comprocess.cpp | wc -w
 ping google.com &
 ```
 
-## Examples
-```
-echo Hello, World!
-cat README.md >> hello.txt
-wc -w < hello.txt > output.txt
-./a.out & ls -l 
-ls -l | wc -c
-```
+
