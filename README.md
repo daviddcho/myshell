@@ -1,7 +1,7 @@
 # myshell
 myshell is a command line interpreter that executes commands read from stdin or from a file.
 
-myshell supports built-in commands, external commands from /bin and special shell commands like I/O redirection, pipes, and background execution.
+myshell supports built-in commands, external commands from /bin and Unix utility commands like I/O redirection, pipes, and background execution.
 
 ## Usage
 ```
@@ -23,9 +23,9 @@ make && ./myshell
 myshell executes external commands by using fork(), execvp(), and wait().
 The fork() system call creates a child process (a copy of the parent parent process). This child process runs the execvp() call that changes the current process into executing the external command. The parent process waits for the child process to complete executing its command using the wait() call.
 
-## Special Shell Commands
+## Unix Utility Commands
 ### I/O redirection (<, >, >>)
-Theses shell commands can redirect standard input and/or standard output to/from a file rather than to/from a keyboard or display.
+This Unix utility can redirect standard input and/or standard output to/from a file rather than to/from a keyboard or display.
 ```
 myshell$ cmd arg1 < input.txt > output.txt
 ```
