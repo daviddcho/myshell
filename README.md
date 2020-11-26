@@ -25,18 +25,23 @@ The fork() system call creates a child process (a copy of the parent parent proc
 
 ## Unix Utility Commands
 ### I/O redirection (<, >, >>)
-This Unix utility can redirect standard input and/or standard output to/from a file rather than to/from a keyboard or display.
+Allows redirection of standard input and/or standard output to/from a file rather than to/from a keyboard or display.
 ```
 myshell$ cmd arg1 < input.txt > output.txt
+         cmd arg1 < input.txt
+         cmd arg1 > output.txt
+         cmd arg1 >> output.txt
 ```
 ### Pipes (|)
+Allows you to redirect a commands output to another commands input (similar to i/o redirection but with commands)
 ```
-grep error comprocess.cpp | wc -w
+myshell$ grep error comprocess.cpp | wc -w
 ```
 
 ### Background execution (&)
+Allows you to execute two commands and the same time
 ```
-ping google.com &
+myshell$ ping google.com & ls -l
 ```
 
 
